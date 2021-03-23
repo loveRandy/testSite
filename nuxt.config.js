@@ -1,5 +1,5 @@
-﻿const isProduction = process.env.NODE_ENV === 'production'
-const isDocker = process.env.NODE_ENV === 'docker'
+const isProduction = process.env.NODE_ENV === 'production'
+// const isDocker = process.env.NODE_ENV === 'docker'
 
 export default {
   server: {
@@ -91,7 +91,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
   ],
   /*
    ** Nuxt.js modules
@@ -101,7 +101,7 @@ export default {
     // '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     ['cookie-universal-nuxt', { alias: 'cookies' }],
     [
       '@nuxtjs/google-adsense',
@@ -123,8 +123,6 @@ export default {
   proxy: {
     '/api/': isProduction
       ? 'https://mlog.club'
-      : isDocker
-      ? 'http://bbs-go-server:8082'
       : 'https://mlog.club',
   },
 
@@ -153,7 +151,7 @@ export default {
     extend(config, ctx) {},
   },
   babel: {
-    plugins: [ 
+    plugins: [
       [
         'component',
         {

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <nav
     ref="nav"
     class="navbar has-shadow"
@@ -8,7 +8,7 @@
     <div class="container">
       <div class="navbar-brand">
         <a href="/" class="navbar-item">
-          <img :alt="config.siteTitle" src="~/assets/images/logo.png" />
+          <img :alt="config.siteTitle" src="~/assets/images/logos.png" />
         </a>
         <a
           :class="{ 'is-active': navbarActive }"
@@ -41,7 +41,7 @@
                   class="input"
                   type="text"
                   maxlength="30"
-                  placeholder="搜索123"
+                  placeholder="搜索"
                 />
                 <span class="icon is-medium is-right">
                   <i class="iconfont icon-search" />
@@ -67,7 +67,7 @@
               <a class="navbar-item" href="/user/settings">
                 <i class="iconfont icon-username" />&nbsp;编辑资料
               </a>
-              <a v-if="isOwnerOrAdmin" class="navbar-item" href="/admin">
+              <a v-if="isOwnerOrAdmin || true" class="navbar-item" href="/admin">
                 <i class="iconfont icon-dashboard" />&nbsp;后台管理
               </a>
               <a class="navbar-item" @click="signout">
@@ -137,6 +137,14 @@ export default {
 
   .navbar-item {
     font-weight: 700;
+  }
+  .container{
+    .navbar-brand{
+      img{
+        position: relative;
+        top:3px;
+      }
+    }
   }
 
   .publish {
