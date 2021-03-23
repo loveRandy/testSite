@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <nav
     ref="nav"
     class="navbar has-shadow"
@@ -41,7 +41,7 @@
                   class="input"
                   type="text"
                   maxlength="30"
-                  placeholder="搜索"
+                  placeholder="搜索123"
                 />
                 <span class="icon is-medium is-right">
                   <i class="iconfont icon-search" />
