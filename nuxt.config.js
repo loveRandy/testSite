@@ -1,4 +1,4 @@
-const isProduction = process.env.NODE_ENV === 'production'
+﻿const isProduction = process.env.NODE_ENV === 'production'
 const isDocker = process.env.NODE_ENV === 'docker'
 
 export default {
@@ -153,7 +153,7 @@ export default {
     extend(config, ctx) {},
   },
   babel: {
-    plugins: [
+    plugins: [ 
       [
         'component',
         {
